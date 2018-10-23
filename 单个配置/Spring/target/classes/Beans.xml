@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  <!-- 定义 bean 的 id，以及对应的 java 类 -->
+  <bean id="helloWorld" class="com.xxgx.lxl.Spring.HelloSpring">
+    <!-- 设置对应的 java 类的成员属性 -->
+    <property name="message" value="Hello World!" />
+  </bean>
+
+</beans>

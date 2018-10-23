@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.jc.mapper.ManagerMapper">
+	
+	<resultMap type="m" id="managerMap">
+		<id property="managerid" column="managerid"/>
+		<result property="managername" column="managername" />
+		<result property="passwd" column="passwd"/>
+		<result property="mstate" column="mstate"/>
+ 	</resultMap>
+	
+	<select id="getAllManager"  resultMap="managerMap">
+		select * from manager
+	</select>
+	
+	<select id="getLogin" resultMap="managerMap">
+		select * from manager where managername=#{managername,jdbcType=VARCHAR} and passwd=#{passwd,jdbcType=VARCHAR}
+	</select>
+
+</mapper>

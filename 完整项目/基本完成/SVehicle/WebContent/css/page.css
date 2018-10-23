@@ -1,0 +1,29 @@
+
+
+/*页码*/
+.show-page{width:100%;}
+.offcial-page{font-size:10px;float:right;}
+.offcial-page li{float:left;color:#8f8f8f;font-size:12px;line-height:30px;margin-right:10px;}
+.offcial-page a{border-radius: 3px;}
+.offcial-page span{display: block;line-height: 30px;}
+.offcial-page a:hover{color:#383838}
+
+.offcial-page .prev:hover,.offcial-page .next:hover{color:#fff;background:#40b2da;border-color: #40b2da;}
+.offcial-page .disable{display:block;line-height:30px;padding:0 10px;border:1px solid #e3e3e3;color:#aaa;}
+.offcial-page .disable:hover{border:1px solid #e3e3e3;color:#aaa;background:#fff;}
+.prev, .next, .offcial-page .num {border: 1px solid #e3e3e3;padding: 0 10px; float: left;color: #232323;text-align: center; line-height: 30px;display: block;}
+.offcial-page .num { margin: 0 5px;}
+.offcial-page .num:hover{color:#fff;background:#40b2da;border-color: #40b2da;}
+.offcial-page input{border:1px solid #e3e3e3;border-radius: 3px;width:40px;height:32px;margin:0 8px;text-align:center;}
+.page-sure{padding:0 10px;border:1px solid #e3e3e3;display:block;text-align:center;line-height:30px;color:#3c3c3c;}
+.offcial-page .page-sure:hover{color:#fff;background:#40b2da;border-color:#40b2da;}
+.page-amount{display: inline;}
+.page-sure-focus{border:#40b2da 1px solid;color:#40b2da;}
+.page-sure.page-sure-focus:hover{color:#40b2da;}
+.page-title .page-amount-focus{border:#40b2da 1px solid;border-radius: 3px;}
+.offcial-page span.current { display: block;color: #fff;float: left; border: 1px solid #40b2da; padding: 0 10px; margin: 0 5px;background: #40b2da;line-height: 30px;border-radius: 3px;}
+ul{list-style:none;}
+
+
+
+

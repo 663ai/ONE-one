@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.jc.mapper.StaffMapper">
+	
+	<resultMap type="sa" id="staffMap">
+		<id property="sid" column="sid"/>
+		<result property="sphone" column="sphone" />
+		<result property="stime" column="stime" />
+		<result property="sname" column="sname" />
+		<result property="sage" column="sage"/>
+		<result property="ssex" column="ssex"/>
+ 	</resultMap>
+	
+	<select id="getall"  resultMap="staffMap">
+		select * from staff
+	</select>
+	
+	<select id="getlimit" resultMap="staffMap">
+		SELECT * from staff  order by slong desc LIMIT 0,5
+	</select>
+	
+	<select id="getD" resultType="java.lang.Integer">
+		select COUNT(*) from staff where sage BETWEEN 60 AND 100
+	</select>
+	
+	<select id="getX" resultType="java.lang.Integer">
+		select COUNT(*) from staff where sage BETWEEN 25 AND 59
+	</select>
+	
+	<select id="getW" resultType="java.lang.Integer">
+		select COUNT(*) from staff where sage BETWEEN 0 AND 24
+	</select>
+
+</mapper>

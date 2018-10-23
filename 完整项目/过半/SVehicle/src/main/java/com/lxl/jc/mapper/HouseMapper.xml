@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.jc.mapper.HouseMapper">
+	
+	<resultMap type="h" id="houseMap">
+		<id property="hid" column="hid"/>
+		<result property="hnumber" column="hnumber" />
+		<result property="hname" column="hname"/>
+		<result property="hphone" column="hphone"/>
+		<result property="hwater" column="hwater"/>
+		<result property="hfire" column="hfire"/>
+		<result property="hnet" column="hnet"/>
+		<result property="hcar" column="hcar"/>
+		<result property="hcost" column="hcost"/>
+		<result property="hele" column="hele"/>
+		<result property="htime" column="htime"/>
+ 	</resultMap>
+	
+	<select id="getwater" resultType="java.lang.Integer">
+		select count(*) from house where hwater="已缴"
+	</select>
+	<select id="getfire" resultType="java.lang.Integer">
+		select count(*) from house where hfire="已缴"
+	</select>
+	<select id="getnet" resultType="java.lang.Integer">
+		select count(*) from house where hnet="已缴"
+	</select>
+	<select id="getele" resultType="java.lang.Integer">
+		select count(*) from house where hele="已缴"
+	</select>
+
+</mapper>

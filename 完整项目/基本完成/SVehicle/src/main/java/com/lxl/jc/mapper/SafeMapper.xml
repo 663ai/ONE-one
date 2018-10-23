@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.jc.mapper.SafeMapper">
+	
+	<resultMap type="s" id="safeMap">
+		<id property="said" column="said"/>
+		<result property="satime" column="satime" />
+		<result property="saa" column="saa"/>
+		<result property="sab" column="sab"/>
+		<result property="sac" column="sac"/>
+		<result property="sad" column="sad"/>
+		<result property="sae" column="sae"/>
+		<result property="saf" column="saf"/>
+		<result property="sag" column="sag"/>
+ 	</resultMap>
+	
+	<select id="geta" resultType="java.lang.Integer">
+		select count(*) from safe where saa="正常"
+	</select>
+	<select id="getb" resultType="java.lang.Integer">
+		select count(*) from safe where sab="正常"
+	</select>
+	<select id="getc" resultType="java.lang.Integer">
+		select count(*) from safe where sac="正常"
+	</select>
+	<select id="getd" resultType="java.lang.Integer">
+		select count(*) from safe where sad="正常"
+	</select>
+	
+	<select id="getaa" resultType="java.lang.Integer">
+		select count(*) from safe where saa="故障"
+	</select>
+	<select id="getbb" resultType="java.lang.Integer">
+		select count(*) from safe where sab="故障"
+	</select>
+	<select id="getcc" resultType="java.lang.Integer">
+		select count(*) from safe where sac="故障"
+	</select>
+	<select id="getdd" resultType="java.lang.Integer">
+		select count(*) from safe where sad="故障"
+	</select>
+	<select id="limit"  resultMap="safeMap">
+		select saa,sab,sac,sad from safe limit 0,5
+	</select>
+
+</mapper>

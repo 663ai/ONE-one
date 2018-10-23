@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  
+	  <settings>
+	        <setting name="logImpl" value="LOG4J"/>
+	  </settings>
+	  <typeAliases>
+	   		<typeAlias type="com.lxl.jc.pojo.Manager" alias="m" />
+	   		<typeAlias type="com.lxl.jc.pojo.Vehi" alias="v" />
+	   		<typeAlias type="com.lxl.jc.pojo.Admin" alias="a" />
+	   		<typeAlias type="com.lxl.jc.pojo.House" alias="h" />
+	   		<typeAlias type="com.lxl.jc.pojo.Safe" alias="s" />
+	   		<typeAlias type="com.lxl.jc.pojo.Staff" alias="sa" />
+	   		<typeAlias type="com.lxl.jc.pojo.Car" alias="c" />
+	  </typeAliases>
+
+  </configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.jc.mapper.CarMapper">
+	
+	<resultMap type="c" id="carMap">
+		<id property="cid" column="cid"/>
+		<id property="cnumber" column="cnumber" />
+		<id property="cover" column="cover"/>
+		<result property="ctime" column="ctime"/>
+ 	</resultMap>
+	
+	<select id="make" resultType="java.lang.Integer">
+		select cover from car where to_days(ctime) = to_days(now())
+	</select>
+	
+	<select id="news" resultType="java.lang.Integer">
+		select (select cover from car where TO_DAYS( NOW( ) ) - TO_DAYS(ctime) = 1)-cover from car where to_days(ctime) = to_days(now())
+	</select>
+	
+
+
+</mapper>

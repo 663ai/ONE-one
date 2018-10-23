@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.veve.mapper.UserMapper">
+	
+	<resultMap type="u" id="userMap">
+		<id property="id" column="id"/>
+		<result property="name" column="name" />
+		<result property="age" column="age"/>
+		<result property="birthday" column="birthday"/>
+		<association property="type" javaType="ut">
+			<id column="id" property="id"/>
+			<result column="typeName" property="typeName"/>
+		</association>
+ 	</resultMap>
+	
+	<select id="getAllUsers" resultMap="userMap">
+		select * from tb_user,tb_type where tb_user.typeid = tb_type.id 
+	</select>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lxl.jc.mapper.VehiMapper">
+	
+	<resultMap type="v" id="vehiMap">
+		<id property="veid" column="veid"/>
+		<result property="venum" column="venum" />
+		<result property="vebr" column="vebr"/>
+		<result property="vemo" column="vemo"/>
+		<result property="vecom" column="vecom"/>
+		<result property="veh" column="veh"/>
+		<result property="vestate" column="vestate"/>
+		<result property="vename" column="vename"/>
+ 	</resultMap>
+	
+	<select id="getCount" resultType="java.lang.Integer">
+		select count(*) from vehi
+	</select>
+	<select id="getD" resultType="java.lang.Integer">
+		select count(*) from vehi where vemo='大型'
+	</select>
+	<select id="getX" resultType="java.lang.Integer">
+		select count(*) from vehi where vemo='小型'
+	</select>
+	<select id="getW" resultType="java.lang.Integer">
+		select count(*) from vehi where vemo='紧凑型'
+	</select>
+		<select id="cars" resultMap="vehiMap">
+		select veid,vename,veh from vehi order by veh desc LIMIT 0,5
+	</select>
+
+</mapper>

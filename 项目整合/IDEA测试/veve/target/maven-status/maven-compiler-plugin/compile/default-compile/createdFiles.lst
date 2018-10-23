@@ -1,0 +1,6 @@
+com\lxl\veve\controller\UserController.class
+com\lxl\veve\pojo\UserType.class
+com\lxl\veve\pojo\UserInfo.class
+com\lxl\veve\service\UserService.class
+com\lxl\veve\service\impl\UserServiceImpl.class
+com\lxl\veve\mapper\UserMapper.class
